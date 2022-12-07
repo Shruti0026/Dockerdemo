@@ -13,7 +13,7 @@ COPY . .
 
 ENV NODE_ENV test
 
-EXPOSE 8005 
+EXPOSE 51005 
 
 CMD ["node", "index.js"]
 
