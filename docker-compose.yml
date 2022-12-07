@@ -2,7 +2,7 @@ version: "3.2"
 
 services:
   app:
-    build: ./myapp
+    build: ./app
     image: shrutika026/app
     ports:
       - 51005:51005
