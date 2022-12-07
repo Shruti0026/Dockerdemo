@@ -6,9 +6,6 @@ services:
     image: shrutika026/app
     ports:
       - 51005:51005
-    volumes:
-      - ./app/:/usr/src/app
-      - /usr/src/app/node_modules
     depends_on:
       - mysql
       - mongo
