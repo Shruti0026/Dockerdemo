@@ -1,0 +1,41 @@
+version: "3.2"
+
+services:
+  app:
+    build: ./app
+    image: shrutika026/app
+    ports:
+      - 51005:51005
+    volumes:
+      - ./app/:/usr/src/app
+      - /usr/src/app/node_modules
+    depends_on:
+      - mysql
+      - mongo
+
+  mongo:
+    container_name: mongo-backend
+    image: mongo
+    expose:
+      - "27017"
+    ports:
+      - 27017:27017
+    volumes:
+      - backendMongodb:/data/db
+  mysql:
+    container_name: mysql-backend
+    image: mysql
+    expose:
+      - "3306"
+    ports:
+      - 3308:3306
+    volumes:
+      - backendmysql:/data/db
+    environment:
+      - MYSQL_ROOT_PASSWORD=SHRUT@2023
+
+
+volumes:
+  backendMongodb: 
+  backendmysql:
+  
