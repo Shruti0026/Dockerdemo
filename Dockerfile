@@ -2,7 +2,7 @@ FROM node:8.16.0
 
 RUN mkdir -p /usr/src/app
 
-WORKDIR /usr/src/myapp
+WORKDIR /usr/src/app
 
 COPY package*.json /usr/src/app/
 
