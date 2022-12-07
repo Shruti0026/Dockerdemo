@@ -8,7 +8,7 @@ COPY package*.json /usr/src/app/
 
 RUN npm install
 
-COPY . /usr/src/myapp
+COPY . /usr/src/app
 
 ENV NODE_ENV test
 
