@@ -2,14 +2,15 @@ version: "3.2"
 
 services:
   app:
-    build: ./app
-    image: shrutika026/app
+    build: .
     ports:
       - 51005:51005
     depends_on:
       - mysql
       - mongo
-
+     volumes:
+      - /usr/src/app
+      - /usr/src/app/node_modules
   mongo:
     container_name: mongo-backend
     image: mongo
