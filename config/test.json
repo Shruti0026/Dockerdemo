@@ -2,7 +2,7 @@
     "database": {
         "mongo": {
             "name": "backend_test",
-            "host": "localhost",
+            "host": "mongo",
             "port": 27017
         },
         "mysql": {
@@ -10,9 +10,9 @@
             "username": "root",
             "password": "SHRUT@2023",
             "options": {
-                "host": "localhost",
-                "port": 3306,
-                "dialect": "mysql",
+                "host": "mysql2",
+                "port": 3308,
+                "dialect": "mysql2",
                 "logging": true,
                 "underscored": true,
                 "timestamps": false,
