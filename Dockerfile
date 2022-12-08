@@ -1,11 +1,12 @@
+FROM node:14.19-alpine3.14
 
-FROM node:8
+WORKDIR  /usr/src/app
 
-RUN mkdir -p /usr/src/app
+COPY package.json ./
 
-WORKDIR /usr/src/app
+RUN apk add --update python2 make g++\
+   && rm -rf /var/cache/apk/*
 
-COPY package*.json ./
 
 RUN npm install
 
@@ -13,8 +14,6 @@ COPY . .
 
 ENV NODE_ENV test
 
-EXPOSE 51005 
+EXPOSE  51005
 
-CMD ["node", "index.js"]
-
-
+CMD ["node","index.js"]
